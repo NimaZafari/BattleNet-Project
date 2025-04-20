@@ -1,4 +1,4 @@
-(function(){const a=document.createElement("link").relList;if(a&&a.supports&&a.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))t(r);new MutationObserver(r=>{for(const n of r)if(n.type==="childList")for(const o of n.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&t(o)}).observe(document,{childList:!0,subtree:!0});function e(r){const n={};return r.integrity&&(n.integrity=r.integrity),r.referrerPolicy&&(n.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?n.credentials="include":r.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function t(r){if(r.ep)return;r.ep=!0;const n=e(r);fetch(r.href,n)}})();const m=`<div
+(function(){const l=document.createElement("link").relList;if(l&&l.supports&&l.supports("modulepreload"))return;for(const r of document.querySelectorAll('link[rel="modulepreload"]'))t(r);new MutationObserver(r=>{for(const n of r)if(n.type==="childList")for(const o of n.addedNodes)o.tagName==="LINK"&&o.rel==="modulepreload"&&t(o)}).observe(document,{childList:!0,subtree:!0});function e(r){const n={};return r.integrity&&(n.integrity=r.integrity),r.referrerPolicy&&(n.referrerPolicy=r.referrerPolicy),r.crossOrigin==="use-credentials"?n.credentials="include":r.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function t(r){if(r.ep)return;r.ep=!0;const n=e(r);fetch(r.href,n)}})();const m=`<div
   id="loadingscreen"
   class="w-full h-screen z-100 overflow-hidden bottom-0 bg-[rgb(21,23,30)] relative flex justify-center items-center"
 >
@@ -385,7 +385,7 @@
          
         </div>
       </div>
-    </div>`,M=(...l)=>{l.forEach(a=>{document.querySelector("#root").insertAdjacentHTML("beforeend",a)})},j=()=>{let l=document.querySelector("#darkbtn"),a=document.querySelector("html");l.addEventListener("click",()=>{a.classList.contains("dark")?a.classList.remove("dark"):a.classList.add("dark")})};let S=()=>{let l=document.querySelector("#loadingscreen"),a=document.querySelector("body");a.classList.add("overflow-hidden"),setTimeout(()=>{l.classList.contains("hidden")?l.classList.remove("hidden"):(l.classList.add("hidden"),a.classList.remove("overflow-hidden"))},5e3)},N=` <div
+    </div>`,M=(...a)=>{a.forEach(l=>{document.querySelector("#root").insertAdjacentHTML("beforeend",l)})},j=()=>{let a=document.querySelector("#darkbtn"),l=document.querySelector("html");a.addEventListener("click",()=>{l.classList.contains("dark")?l.classList.remove("dark"):l.classList.add("dark")})};let S=()=>{let a=document.querySelector("#loadingscreen"),l=document.querySelector("body");l.classList.add("overflow-hidden"),setTimeout(()=>{a.classList.contains("hidden")?a.classList.remove("hidden"):(a.classList.add("hidden"),l.classList.remove("overflow-hidden"))},1e4)},N=` <div
       id="headersectionbottom"
       class="xs:top-0 z-50 xs:py-[16px] sticky dark:bg-white1 bg-[#15171e] lg:top-0 lg:mt-[5px] max-w-[1632px] px-[16px] h-auto mx-auto"
     >
@@ -415,7 +415,7 @@
         </div>
         <div
           id="leftmenu"
-          class="dark:bg-slate-200 z-50 bg-[#1A1C23] overflow-y-auto p-0 absolute -top-5 -left-5 -translate-x-[600px] transition-all h-screen flex flex-col w-[63vw]"
+          class="dark:bg-slate-200 z-50 bg-[#1A1C23] overflow-y-auto p-0 absolute -top-5 -left-5 -translate-x-[600px] transition-all h-screen flex flex-col w-[80vw]"
         >
           <div class=" ">
             <div
@@ -675,7 +675,7 @@
         </div>
         <div
           id="rightmenu"
-          class="dark:bg-slate-200 z-50 bg-[#1A1C23] overflow-y-auto p-0 absolute -top-5 -right-5 translate-x-[600px] transition-all h-screen flex flex-col w-[63vw]"
+          class="dark:bg-slate-200 z-50 bg-[#1A1C23] overflow-y-auto p-0 absolute -top-5 -right-5 translate-x-[600px] transition-all h-screen flex flex-col w-[80vw]"
         >
           <div class="">
             <div
@@ -840,7 +840,7 @@
             </a>
 
             <div
-              class="items-center content-start pt-3 mt-4 rounded-br-[7px] h-[250px] dark:bg-[#148dffab] bg-[#2828286e] rounded-bl-[7px] w-full"
+              class="items-center content-start pt-3 mt-4 rounded-br-[7px] h-[800px] dark:bg-[#148dffab] bg-[#2828286e] rounded-bl-[7px] w-full"
             >
               <a
                 href="https://battle.net/support/en-us/"
@@ -1191,7 +1191,7 @@
           </div>
         </div>
       </div>
-    </div>`;const B=()=>{let l=document.querySelector("#leftOpen"),a=document.querySelector("#rightOpen"),e=document.querySelector("#rightmenu"),t=document.querySelector("#leftmenu"),r=document.querySelector("#rc"),n=document.querySelector("#lc");document.querySelector("#headersectionbottom");let o=document.querySelector("body"),s=document.querySelector("#searchbtn");l.addEventListener("click",()=>{t.classList.remove("-translate-x-[600px]"),o.classList.add("overflow-hidden"),s.classList.add("hidden"),e.classList.contains("translate-x-[600px]")||e.classList.add("translate-x-[600px]")}),a.addEventListener("click",()=>{o.classList.add("overflow-hidden"),e.classList.remove("translate-x-[600px]"),s.classList.add("hidden"),t.classList.contains("-translate-x-[600px]")||t.classList.add("-translate-x-[600px]")}),n.addEventListener("click",()=>{t.classList.add("-translate-x-[600px]"),o.classList.remove("overflow-hidden"),s.classList.remove("hidden")}),r.addEventListener("click",()=>{e.classList.add("translate-x-[600px]"),o.classList.remove("overflow-hidden"),s.classList.remove("hidden")})},C=()=>` <div
+    </div>`;const B=()=>{let a=document.querySelector("#leftOpen"),l=document.querySelector("#rightOpen"),e=document.querySelector("#rightmenu"),t=document.querySelector("#leftmenu"),r=document.querySelector("#rc"),n=document.querySelector("#lc");document.querySelector("#headersectionbottom");let o=document.querySelector("body"),s=document.querySelector("#searchbtn");a.addEventListener("click",()=>{t.classList.remove("-translate-x-[600px]"),o.classList.add("overflow-hidden"),s.classList.add("hidden"),e.classList.contains("translate-x-[600px]")||e.classList.add("translate-x-[600px]")}),l.addEventListener("click",()=>{o.classList.add("overflow-hidden"),e.classList.remove("translate-x-[600px]"),s.classList.add("hidden"),t.classList.contains("-translate-x-[600px]")||t.classList.add("-translate-x-[600px]")}),n.addEventListener("click",()=>{t.classList.add("-translate-x-[600px]"),o.classList.remove("overflow-hidden"),s.classList.remove("hidden")}),r.addEventListener("click",()=>{e.classList.add("translate-x-[600px]"),o.classList.remove("overflow-hidden"),s.classList.remove("hidden")})},C=()=>` <div
       id="slider"
       class="max-w-[1632px] xs:h-[440px] mx-auto z-0 px-[16px] lg:h-[360px]"
     >
@@ -1299,7 +1299,7 @@
                 ${t.callToAction.buttonText}</a
                 >
                 </div>
-                </div>`);document.querySelector("#slides").insertAdjacentHTML("afterbegin",e.join(""))};let L=()=>{let l=[...document.querySelectorAll("#slide")],a=document.querySelector("#nextbtn"),e=document.querySelector("#prevbtn"),t=document.querySelector("#stopbtn"),r=document.querySelector("#pagination"),n=document.querySelector("#slider");document.querySelector("#playbtn"),document.querySelector("#pausebtn");let o=0;n.addEventListener("mouseover",()=>{a.classList.remove("hidden"),e.classList.remove("hidden")}),n.addEventListener("mouseout",()=>{a.classList.add("hidden"),e.classList.add("hidden")});let s=i=>{l.forEach((c,u)=>{c.style.left=`${(u-i)*100}%`}),b()};s(o);let p=()=>{o===l.length-1?(o=0,s(o)):(o++,s(o))},x=()=>{o===0?(o=l.length-1,s(o)):(o--,s(o))};function b(){[...document.querySelectorAll(".bullet")].forEach((c,u)=>{c.classList.remove("active"),u===o&&c.classList.add("active")})}a.addEventListener("click",()=>{p()}),e.addEventListener("click",()=>{x()});let g=setInterval(()=>{p()},6e3),h=!0;t.addEventListener("click",()=>{h===!0?(clearInterval(g),t.innerHTML=`<svg
+                </div>`);document.querySelector("#slides").insertAdjacentHTML("afterbegin",e.join(""))};let L=()=>{let a=[...document.querySelectorAll("#slide")],l=document.querySelector("#nextbtn"),e=document.querySelector("#prevbtn"),t=document.querySelector("#stopbtn"),r=document.querySelector("#pagination"),n=document.querySelector("#slider");document.querySelector("#playbtn"),document.querySelector("#pausebtn");let o=0;n.addEventListener("mouseover",()=>{l.classList.remove("hidden"),e.classList.remove("hidden")}),n.addEventListener("mouseout",()=>{l.classList.add("hidden"),e.classList.add("hidden")});let s=i=>{a.forEach((c,u)=>{c.style.left=`${(u-i)*100}%`}),b()};s(o);let p=()=>{o===a.length-1?(o=0,s(o)):(o++,s(o))},x=()=>{o===0?(o=a.length-1,s(o)):(o--,s(o))};function b(){[...document.querySelectorAll(".bullet")].forEach((c,u)=>{c.classList.remove("active"),u===o&&c.classList.add("active")})}l.addEventListener("click",()=>{p()}),e.addEventListener("click",()=>{x()});let g=setInterval(()=>{p()},6e3),h=!0;t.addEventListener("click",()=>{h===!0?(clearInterval(g),t.innerHTML=`<svg
           id="playbtn"
           class="w-[20px] fill-[#ffffff7a] hover:fill-[#ffffff] h-[20px] justify-self-start"
           xmlns="http://www.w3.org/2000/svg"
@@ -1325,7 +1325,7 @@
           <path
             d="M10 18.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5zm4.5.5a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-.5.5z"
           ></path>
-        </svg>`,h=!0)}),document.addEventListener("keyup",i=>{i.key==="ArrowRight"?p():i.key==="ArrowLeft"&&x()});let v=l.map((i,c)=>`<div class="bullet" data-id="${c}"></div>`);r.insertAdjacentHTML("afterbegin",v.join("")),b(),document.querySelectorAll(".bullet").forEach(i=>{i.addEventListener("click",c=>{o=+c.target.dataset.id,s(o)})});let d=0,f=0,w=()=>{d<f?x():d>f&&p(),f=0,d=0};n.addEventListener("touchstart",i=>{d=i.changedTouches[0].screenX}),n.addEventListener("touchend",i=>{f=i.changedTouches[0].screenX,w()})},q=`  <div
+        </svg>`,h=!0)}),document.addEventListener("keyup",i=>{i.key==="ArrowRight"?p():i.key==="ArrowLeft"&&x()});let v=a.map((i,c)=>`<div class="bullet" data-id="${c}"></div>`);r.insertAdjacentHTML("afterbegin",v.join("")),b(),document.querySelectorAll(".bullet").forEach(i=>{i.addEventListener("click",c=>{o=+c.target.dataset.id,s(o)})});let d=0,f=0,w=()=>{d<f?x():d>f&&p(),f=0,d=0};n.addEventListener("touchstart",i=>{d=i.changedTouches[0].screenX}),n.addEventListener("touchend",i=>{f=i.changedTouches[0].screenX,w()})},q=`  <div
       class="w-full mt-[50px] border-t-2 border-b-2 border-[#23252B] flex justify-center"
     >
       <div
@@ -1396,7 +1396,7 @@
           </div>
         </div>
       </div>
-    </div>`,H=` <div class="w-full">
+    </div>`,T=` <div class="w-full">
       <div
         class="max-w-[1600px] mx-auto z-0 py-[40px] xs:px-[16px] lg:px-[40px] mt-[40px] xs:h-[548px] lg:h-[340px]"
       >
@@ -1404,10 +1404,10 @@
           class="w-full lg:h-[48px] flex xs:flex-col lg:flex-row justify-between items-center"
         >
           <div
-            class="w-fit xs:order-2 xs:!my-4 lg:order-1 flex flex-row h-full"
+            class="w-fit xs:order-2 xs:!my-4 lg:order-1 xs:grid xs:grid-cols-2 sm:flex sm:flex-row h-full"
           >
             <a href="https://careers.blizzard.com/"
-              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center group"
+              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] justify-center transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center group"
             >
               <span
                 class="inline-block font-ObjectSans text-[#fff] dark:text-blue3 dark:group-hover:text-white2 text-[14px]"
@@ -1415,7 +1415,7 @@
               >
             </a>
             <a href="https://www.blizzard.com/company/about/"
-              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
+              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] justify-center transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
             >
               <span
                 class="inline-block font-ObjectSans text-[#fff] dark:text-blue3 dark:group-hover:text-white2 text-[14px]"
@@ -1423,7 +1423,7 @@
               >
             </a>
             <a href="https://www.battle.net/support/"
-              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
+              class="flex px-[16px] dark:hover:bg-blue3 justify-center h-[48px] transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
             >
               <span
                 class="inline-block font-ObjectSans text-[#fff] dark:text-blue3 dark:group-hover:text-white2 text-[14px]"
@@ -1431,7 +1431,7 @@
               >
             </a>
             <a href="https://www.blizzard.com/company/contact"
-              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
+              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] justify-center transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
             >
               <span
                 class="inline-block font-ObjectSans text-[#fff] dark:text-blue3 dark:group-hover:text-white2 text-[14px]"
@@ -1439,7 +1439,7 @@
               >
             </a>
             <a href="https://blizzard.gamespress.com/"
-              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
+              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] justify-center transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
             >
               <span
                 class="inline-block font-ObjectSans text-[#fff] dark:text-blue3 dark:group-hover:text-white2 text-[14px]"
@@ -1447,7 +1447,7 @@
               >
             </a>
             <a href="https://develop.battle.net/"
-              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
+              class="flex px-[16px] dark:hover:bg-blue3 h-[48px] justify-center transition-all rounded-[5px] cursor-pointer hover:bg-[#303237] transition-duration-1000 items-center group content-center"
             >
               <span
                 class="inline-block font-ObjectSans text-[#fff] dark:text-blue3 dark:group-hover:text-white2 text-[14px]"
@@ -1683,7 +1683,7 @@
         ></path>
       </svg>
     </a>
-`;const T=()=>` <div class="max-w-[1600px] mx-auto z-0 px-[16px] pb-[32px]">
+`;const H=()=>` <div class="max-w-[1600px] mx-auto z-0 px-[16px] pb-[32px]">
       <div class="w-full mt-[48px] flex flex-col">
         <span class="text-[24px] text-white1 dark:text-blue3 font-ObjectSans"
           >Featured</span
@@ -1806,7 +1806,7 @@
          
         </div>
       </div>
-    </div>`,D=async()=>{let e=(await(await fetch("https://nimazafari.github.io/BattleNet-API/cart4.json")).json()).map(t=>`<a class="rounded-[5px] shadow-2xs" href="${t.destination}">
+    </div>`,P=async()=>{let e=(await(await fetch("https://nimazafari.github.io/BattleNet-API/cart4.json")).json()).map(t=>`<a class="rounded-[5px] shadow-2xs" href="${t.destination}">
             <div
               class="relative cursor-pointer rounded-[5px] overflow-hidden shadow-2xs shadow-blue5 outline-0 h-[409px]"
             >
@@ -1848,7 +1848,33 @@
               >
             </div>
           </a>
-         `);document.querySelector("#gamesContainer4").insertAdjacentHTML("afterbegin",e.join(""))};class P{constructor(){this.slides=document.querySelectorAll("#slide"),this.prevBtn=document.getElementById("prevbtn"),this.nextBtn=document.getElementById("nextbtn"),this.pauseBtn=document.getElementById("pausebtn"),this.pagination=document.getElementById("pagination"),this.currentIndex=0,this.autoPlayInterval=null,this.autoPlayDelay=5e3,this.init()}init(){this.slides.length!==0&&(this.showSlide(this.currentIndex),this.createPagination(),this.setupEventListeners(),this.startAutoPlay())}showSlide(a){this.slides.forEach((t,r)=>{t.style.opacity=r===a?"1":"0",t.style.zIndex=r===a?"1":"0"}),this.pagination.querySelectorAll(".pagination-dot").forEach((t,r)=>{t.classList.toggle("active",r===a)})}createPagination(){this.pagination.innerHTML="",this.slides.forEach((a,e)=>{const t=document.createElement("button");t.className=`pagination-dot cursor-pointer w-[40px] h-[4px] rounded-full mx-[4px] ${e===0?"active bg-[#ffffff7a]":"bg-[#ffffff7a]"}`,t.addEventListener("click",()=>{this.currentIndex=e,this.showSlide(e),this.resetAutoPlay()}),this.pagination.appendChild(t)})}setupEventListeners(){this.prevBtn.addEventListener("click",()=>{this.prevSlide(),this.resetAutoPlay()}),this.nextBtn.addEventListener("click",()=>{this.nextSlide(),this.resetAutoPlay()}),this.pauseBtn.addEventListener("click",()=>{this.toggleAutoPlay()})}prevSlide(){this.currentIndex=(this.currentIndex-1+this.slides.length)%this.slides.length,this.showSlide(this.currentIndex)}nextSlide(){this.currentIndex=(this.currentIndex+1)%this.slides.length,this.showSlide(this.currentIndex)}startAutoPlay(){this.autoPlayInterval=setInterval(()=>{this.nextSlide()},this.autoPlayDelay)}stopAutoPlay(){clearInterval(this.autoPlayInterval)}resetAutoPlay(){this.stopAutoPlay(),this.startAutoPlay()}toggleAutoPlay(){this.autoPlayInterval?(this.stopAutoPlay(),this.autoPlayInterval=null,this.pauseBtn.innerHTML='<svg class="w-[20px] h-[20px] fill-[#ffffff] justify-self-start" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>'):(this.startAutoPlay(),this.pauseBtn.innerHTML='<svg class="w-[20px] h-[20px] fill-[#ffffff] justify-self-start" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 16h2V8H9v8zm3-14C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-4h2V8h-2v8z"/></svg>')}}const I=async()=>{let e=(await(await fetch("https://nimazafari.github.io/BattleNet-API/Warcraft.json")).json()).map(t=>`<a
+         `);document.querySelector("#gamesContainer4").insertAdjacentHTML("afterbegin",e.join(""))};class D{constructor(){this.slides=document.querySelectorAll("#slide"),this.prevBtn=document.getElementById("prevbtn"),this.nextBtn=document.getElementById("nextbtn"),this.pauseBtn=document.getElementById("stopbtn"),this.pagination=document.getElementById("pagination"),this.currentIndex=0,this.autoPlayInterval=null,this.autoPlayDelay=5e3,this.init()}init(){this.slides.length!==0&&(this.showSlide(this.currentIndex),this.createPagination(),this.setupEventListeners(),this.startAutoPlay())}showSlide(l){this.slides.forEach((t,r)=>{t.style.opacity=r===l?"1":"0",t.style.zIndex=r===l?"1":"0"}),this.pagination.querySelectorAll(".pagination-dot").forEach((t,r)=>{t.classList.toggle("active",r===l)})}createPagination(){this.pagination.innerHTML="",this.slides.forEach((l,e)=>{const t=document.createElement("button");t.className=`pagination-dot cursor-pointer w-[40px] h-[4px] rounded-full mx-[4px] ${e===0?"active bg-[#ffffff7a]":"bg-[#ffffff7a]"}`,t.addEventListener("click",()=>{this.currentIndex=e,this.showSlide(e),this.resetAutoPlay()}),this.pagination.appendChild(t)})}setupEventListeners(){this.prevBtn.addEventListener("click",()=>{this.prevSlide(),this.resetAutoPlay()}),this.nextBtn.addEventListener("click",()=>{this.nextSlide(),this.resetAutoPlay()}),this.pauseBtn.addEventListener("click",()=>{this.toggleAutoPlay()})}toggleAutoPlay(){this.autoPlayInterval?(this.stopAutoPlay(),this.autoPlayInterval=null,this.pauseBtn.innerHTML='<svg class="w-[20px] cursor-pointer fill-[#ffffff7a] hover:fill-[#ffffff] h-[20px] justify-self-start" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-labelledby="blz-icon-title-bn-play-filled" viewBox="0 0 24 24" part="icon"><title id="blz-icon-title-bn-play-filled">Play</title><path d="M7.768 5.489A.5.5 0 0 0 7 5.911v12.178a.5.5 0 0 0 .768.422l9.57-6.09a.5.5 0 0 0 0-.843L7.767 5.49Z"></path></svg>'):(this.startAutoPlay(),this.pauseBtn.innerHTML=`<svg
+              
+              class="w-[20px] cursor-pointer fill-[#ffffff7a] hover:fill-[#ffffff] h-[20px] justify-self-start"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              aria-labelledby="blz-icon-title-bn-pause-filled"
+              viewBox="0 0 24 24"
+              part="icon"
+            >
+              <title id="blz-icon-title-bn-pause-filled">Pause</title>
+              <path
+                d="M10 18.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5zm4.5.5a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-.5.5z"
+              ></path>
+            </svg>`)}prevSlide(){this.currentIndex=(this.currentIndex-1+this.slides.length)%this.slides.length,this.showSlide(this.currentIndex)}nextSlide(){this.currentIndex=(this.currentIndex+1)%this.slides.length,this.showSlide(this.currentIndex)}startAutoPlay(){this.autoPlayInterval=setInterval(()=>{this.nextSlide()},this.autoPlayDelay)}stopAutoPlay(){clearInterval(this.autoPlayInterval)}resetAutoPlay(){this.stopAutoPlay(),this.startAutoPlay()}toggleAutoPlay(){this.autoPlayInterval?(this.stopAutoPlay(),this.autoPlayInterval=null,this.pauseBtn.innerHTML='<svg class="w-[20px] cursor-pointer fill-[#ffffff7a] hover:fill-[#ffffff] h-[20px] justify-self-start" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-labelledby="blz-icon-title-bn-play-filled" viewBox="0 0 24 24" part="icon"><title id="blz-icon-title-bn-play-filled">Play</title><path d="M7.768 5.489A.5.5 0 0 0 7 5.911v12.178a.5.5 0 0 0 .768.422l9.57-6.09a.5.5 0 0 0 0-.843L7.767 5.49Z"></path></svg>'):(this.startAutoPlay(),this.pauseBtn.innerHTML=`<svg
+              
+              class="w-[20px] cursor-pointer fill-[#ffffff7a] hover:fill-[#ffffff] h-[20px] justify-self-start"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              aria-labelledby="blz-icon-title-bn-pause-filled"
+              viewBox="0 0 24 24"
+              part="icon"
+            >
+              <title id="blz-icon-title-bn-pause-filled">Pause</title>
+              <path
+                d="M10 18.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5zm4.5.5a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-.5.5z"
+              ></path>
+            </svg>`)}}const I=async()=>{let e=(await(await fetch("https://nimazafari.github.io/BattleNet-API/Warcraft.json")).json()).map(t=>`<a
                 href="./loinsignup.html"
                 class="h-[55px] px-[12px] hover:bg-[#303237] dark:hover:bg-[#ffffff46] transition-all transition-duration-1000 rounded-[5px] group flex items-center cursor-pointer gap-2 content-center justify-start"
               >
@@ -2088,4 +2114,4 @@
                           >
                         </div>
                       </a>
-                    </li>`);document.querySelector("#dropdownsum6").insertAdjacentHTML("afterbegin",e.join(""))};M(m,k,N,C(),z(),T(),$(),E(),q,H);A().then(()=>{new P});I();_();Q();F();Z();G();U();Y();W();K();R();X();y();V();O();D();j();S();L();B();
+                    </li>`);document.querySelector("#dropdownsum6").insertAdjacentHTML("afterbegin",e.join(""))};M(m,k,N,C(),z(),H(),$(),E(),q,T);A().then(()=>{new D});I();_();Q();F();Z();G();U();Y();W();K();R();X();y();V();O();P();j();S();L();B();
